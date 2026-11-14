@@ -1,7 +1,5 @@
 # FDE Handover Runbook Generator（運用引き継ぎ手順書のMarkdown整形）
 
-[![tests](https://github.com/takashi-101/fde-handover-runbook-gen/actions/workflows/tests.yml/badge.svg)](https://github.com/takashi-101/fde-handover-runbook-gen/actions/workflows/tests.yml)
-
 システム名、主管ロール、日次確認コマンド、エスカレーション先（異常時の連絡先）、切り戻し手順（変更を元に戻す手順）の5項目を受け取り、決まった見出し構成の運用引き継ぎ手順書を、Markdown（見出しや箇条書きを記号で書く文書の形式）の文字列で返すPythonの関数です。標準ライブラリだけで動きます。
 
 ## 30秒で読む要点
@@ -63,8 +61,6 @@ python -m unittest discover -s tests -v
 - 異常系：項目の不足と未定義の項目、`None` のリスト、`HandoverSpec` 以外の入力
 - READMEの「実行」に載せた出力が、`examples/run_example.py` の実際の出力と一致すること
 
-CI（GitHub Actionsによる自動テスト）は、push と pull request のたびに、Python 3.11 と 3.12 でテストとサンプルの実行を行う設定です（`.github/workflows/tests.yml`）。
-
 ## 制約
 - 見出しの文言と節の構成は固定で、変える設定はありません。
 - 型の検査はしません。`daily_commands` と `rollback_steps` には文字列のリスト（またはタプル）を渡す前提です。
@@ -78,15 +74,16 @@ examples/
   sample_spec.json           見本データ（架空）
   run_example.py             見本データから手順書を表示
 tests/                       ユニットテスト
-.github/workflows/tests.yml  CI
 ```
 
 ## 根拠（学習）
 
-| 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
-|---|---|---|
-| 運用引き継ぎ書（日次確認・連絡先・切り戻し手順）の生成 | Amazon Web Services Training and Certification「AWS Educate Getting Started with Cloud Ops - Training Badge」2025年6月1日 | https://www.credly.com/badges/872f51f0-225c-4b24-af97-298964ac2dba |
-| 切り戻し手順の記載 | Amazon Web Services Training and Certification「AWS Knowledge: Data Protection & Disaster Recovery - Training Badge」2025年5月12日 | https://www.credly.com/badges/73091cd6-0929-4867-9a2e-e82c6aaeb3f4 |
+| 求められる力 | 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
+|---|---|---|---|
+| 業務改革・AX推進（課題の整理から定着まで） | 運用引き継ぎ書（日次確認・連絡先・切り戻し手順）の生成 | Amazon Web Services Training and Certification「AWS Educate Getting Started with Cloud Ops - Training Badge」2025年6月1日 | https://www.credly.com/badges/872f51f0-225c-4b24-af97-298964ac2dba |
+| クラウドと閉域の基盤 | 切り戻し手順の記載 | Amazon Web Services Training and Certification「AWS Knowledge: Data Protection & Disaster Recovery - Training Badge」2025年5月12日 | https://www.credly.com/badges/73091cd6-0929-4867-9a2e-e82c6aaeb3f4 |
+
+「求められる力」の分け方は、[プロフィール](https://github.com/takashi-101) の「FDE・AXで求められる力と、その根拠」と同じです。
 
 ## ライセンス
 MIT（[LICENSE](LICENSE)）
