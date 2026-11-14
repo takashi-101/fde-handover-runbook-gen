@@ -81,5 +81,12 @@ tests/                       ユニットテスト
 .github/workflows/tests.yml  CI
 ```
 
+## 根拠（学習）
+
+| 機能 | 裏付けになる学習（発行元・名称・発行日） | 照会先（Credly） |
+|---|---|---|
+| 運用引き継ぎ書（日次確認・連絡先・切り戻し手順）の生成 | Amazon Web Services Training and Certification「AWS Educate Getting Started with Cloud Ops - Training Badge」2025年6月1日 | https://www.credly.com/badges/872f51f0-225c-4b24-af97-298964ac2dba |
+| 切り戻し手順の記載 | Amazon Web Services Training and Certification「AWS Knowledge: Data Protection & Disaster Recovery - Training Badge」2025年5月12日 | https://www.credly.com/badges/73091cd6-0929-4867-9a2e-e82c6aaeb3f4 |
+
 ## ライセンス
 MIT（[LICENSE](LICENSE)）
