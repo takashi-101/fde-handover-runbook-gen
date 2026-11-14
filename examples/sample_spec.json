@@ -1,0 +1,14 @@
+{
+  "system_name": "架空の窓口予約システム",
+  "owner_role": "架空課 運用担当",
+  "daily_commands": [
+    "python scripts/check_queue.py --date today",
+    "python scripts/export_daily_report.py"
+  ],
+  "escalation_contact": "架空の情報システム担当窓口（内線0000）",
+  "rollback_steps": [
+    "予約受付画面に一時停止のお知らせを表示する",
+    "前日のバックアップから予約データを戻す",
+    "電話受付に切り替えたことを利用者に案内する"
+  ]
+}
